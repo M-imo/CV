@@ -46,7 +46,7 @@ class Skills extends StatelessWidget {
               sizingInformation: sizingInformation),
           DetailSkill(
               skillName:"Kotlin",
-              skillValue: 0.8,
+              skillValue: 0.5,
               sizingInformation: sizingInformation),
           DetailSkill(
               skillName:"Swift",
@@ -92,12 +92,16 @@ class DetailSkill extends StatelessWidget {
           ),
           const SizedBox(
             width: 50,
-          ),
+          ), const Spacer(),
           Expanded(
-            child: LinearPercentIndicator(
-              percent: skillValue,
-              backgroundColor: primaryColor,
-              progressColor: Colors.white70,
+            child: Align(alignment: Alignment.centerRight,
+
+              child: LinearPercentIndicator(
+                alignment: MainAxisAlignment.end,
+                percent: skillValue,
+                backgroundColor: primaryColor,
+                progressColor: Colors.white70,
+              ),
             ),
           )
         ],
